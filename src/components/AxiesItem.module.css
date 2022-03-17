@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 30px 10px 30px 10px;
+    width: 900px;
+}
+
+.axie_img {
+    width: 100px;
+    height: 100px;
+}
+
+.name {
+    font-weight: bold;
+}

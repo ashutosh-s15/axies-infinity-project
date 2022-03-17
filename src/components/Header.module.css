@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+}
+
+.container {
+    justify-content: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 35px;
+}

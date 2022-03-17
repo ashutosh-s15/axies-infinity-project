@@ -1,0 +1,61 @@
+.filter__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 60px 60px 0px 60px;
+    text-align: left;
+}
+  
+.filter__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+  
+.filter__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 15rem;
+    max-width: 100%;
+}
+
+.filter__control p {
+    font-weight: lighter;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: rgb(94, 92, 92);
+}
+
+.filter__control select {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 10rem;
+    max-width: 100%;
+}
+
+.filter__actions {
+    padding-left: 60px;
+}
+
+.filter__actions button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #221627;
+    background-color: rgb(236, 236, 236);
+    color: black;
+    border-radius: 9px;
+    text-align: right;
+}
+
+.range__container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
