@@ -33,7 +33,6 @@ const FilterForm = ({ onSaveData }) => {
         const classesData = classesInput.replace(/\s/g, '').split(",");
 
         setEnteredClasses(classesData);
-        console.log(enteredClasses)
     };
 
     const stagesChangeHandler = (e) => {
@@ -70,15 +69,13 @@ const FilterForm = ({ onSaveData }) => {
 
 
     const breedCountChangeHandler = (e) => {
+
         if (e.target.value) {
             setEnteredbreedCount(parseInt(e.target.value));
-            console.log('test')
-            console.log(enteredBreedCount)
         }
         else {
             setEnteredbreedCount(null);
         }
-        console.log(enteredBreedCount)
     };
 
     const hpChangeHandler = (e) => {
@@ -139,7 +136,6 @@ const FilterForm = ({ onSaveData }) => {
             morale: enteredMorale
         }
 
-        console.log(axiesFilterData)
         onSaveData(axiesFilterData);
     }
 
@@ -178,13 +174,6 @@ const FilterForm = ({ onSaveData }) => {
                         <input type='text' placeholder="eg: 1,5" onChange={purenessChangeHandler} />
                         <p>Enter values between 0 to 6</p>
                     </div>
-                    {/* <div className={classes.filter__control}>
-                        <label>Breedable</label>
-                        <select>
-                            <option value={true}>True</option>
-                            <option value={false}>False</option>
-                        </select>
-                    </div> */}
                     <div className={classes.filter__control}>
                         <label>Breed Count</label>
                         <input type='number' min='0' max='7' placeholder="Value between 0 to 7" onChange={breedCountChangeHandler} />

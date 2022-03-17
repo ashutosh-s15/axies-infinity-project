@@ -20,16 +20,14 @@ const App = () => {
         getAxies(axiesFilterData)
             .then((res) => {
 
-                if (res) {
+                const { data } = res;
+
+                if (data.axies.total === 0) {
                     notify("No results found.");
-                    console.log("emoty response")
                 }
 
-                const { data } = res;
                 setAxiesData(data);
                 setIsLoading(false);
-                console.log(res);
-                console.log(axiesData);
 
                 //notification for error
                 if (res.errors) {

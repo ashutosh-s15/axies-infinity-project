@@ -3,11 +3,11 @@ const getAxies = async ({ owner, parts, classes, stages, numMystic, pureness, br
     const criteriaObject = { parts, classes, stages, numMystic, pureness, breedCount, hp, skill, speed, morale };
 
     //deleting empty criteria properties
-    if (criteriaObject.parts.length === 0) {
+    if (criteriaObject.parts.length === 0 || criteriaObject.classes[0] === '') {
         delete criteriaObject.parts;
     }
 
-    if (criteriaObject.classes.length === 0) {
+    if (criteriaObject.classes.length === 0 || criteriaObject.classes[0] === '') {
         delete criteriaObject.classes;
     }
 
@@ -26,7 +26,6 @@ const getAxies = async ({ owner, parts, classes, stages, numMystic, pureness, br
     if (criteriaObject.stages === null) {
         delete criteriaObject.stages;
     }
-    console.log(criteriaObject);
 
     try {
         const jsonRes = await fetch('https://graphql-gateway.axieinfinity.com/graphql',
@@ -48,8 +47,6 @@ const getAxies = async ({ owner, parts, classes, stages, numMystic, pureness, br
             });
 
         const res = await jsonRes.json();
-
-        console.log(res);
 
         return res;
     }
