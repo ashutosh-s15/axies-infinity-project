@@ -6,7 +6,7 @@ const Header = () => {
         <>
             <div className={classes.header}>
                 <div className={classes.container}>
-                    <span className={classes.title}>AXIS INFINITY</span>
+                    <span className={classes.title}>AXIES INFINITY</span>
                 </div>
             </div>
         </>
